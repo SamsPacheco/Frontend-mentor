@@ -1,0 +1,21 @@
+/*archivo principal de SASS*/
+@use 'initial';
+@use 'variables';
+@use 'header';
+@use 'navbar';
+@use 'modal-navbar';
+@use 'gallery';
+@use 'details';
+@use 'input';
+@use 'modal-cart';
+@use 'modal-gallery';
+
+.show{
+    display: block;
+}
+.Empty-cart{
+    text-align: center;
+    margin-top: 35px;
+    font-weight: 700;
+    color: variables.$Black-modal;
+}

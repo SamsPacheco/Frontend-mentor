@@ -1,0 +1,63 @@
+@use 'variables' as color;
+@use 'mixins';
+
+.modal-gallery{
+        width: 540px;
+        /* border: 1px solid white; */
+        margin-top: -120px;
+        position: relative;
+        padding: 30px 0;
+        /* display: none; */
+        &__icon-container{
+            /* border: 1px solid red; */
+            height: 35px;
+            text-align: end;
+        }
+        &__close-icon{
+            width: 20px;
+            &:hover{
+                cursor: pointer;
+                content: url(../images/icon-close-orange.svg);
+            }
+        }
+        &__img-container{
+            background-image: url('../images/image-product-1.jpg');
+            height: 550px;
+            background-size: cover;
+            background-position-y: -30px;
+            background-repeat: no-repeat;
+            border-radius: 15px;
+            background-position: center;
+            position: relative;
+            margin-bottom: 35px;
+        }
+        &__previous{
+            @include mixins.button-previous-next(250px, -25px)
+        }
+        &__next{
+            @include mixins.button-previous-next(250px, 515px);
+        }
+        &__thumnails{
+            display: flex;
+            justify-content: space-evenly;
+            /* border: 1px solid red; */
+            width: 450px;
+            margin: auto;
+        }
+        &__thumnail{
+            @media(min-width: 1115px){
+                width: 90px;
+            border-radius: 15px;
+            &:hover{
+                cursor: pointer;
+                border: 2px solid color.$Orange;
+            }
+            }
+        }
+        &__background{
+            @include mixins.modal-background;
+            display: none;
+            place-content: center;
+        }
+        
+        }

@@ -1,0 +1,40 @@
+@use 'variables' as color;
+
+.input{
+    /* border: 1px dashed red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    background-color: color.$Light-grayish-blue;
+    padding: 18px;
+    border-radius: 10px;
+    width: 100%;
+    height: 56px;
+    &__number{
+        border: none;
+        text-align: center;
+        background-color: color.$Light-grayish-blue;
+        font-weight: bold;
+        font-size: 1.1em;
+        outline: none;
+    }
+    &__minus{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__plus{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    @media(min-width: 1115px){
+        width: 155px;
+        height: 55px;
+        margin: 0;
+        &__number{
+            width: 100px;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@use 'variables' as color;
+@use 'mixins';
+.gallery{
+    &__img-container{
+        
+        background-image: url('../images/image-product-1.jpg');
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position-y: -30px;
+        position: relative;
+
+    }
+    &__previous{
+        @include mixins.button-previous-next(140px, 15px);
+        &:hover{
+            cursor: pointer;
+        }
+        @media(min-width: 1115px){
+            display: none;
+        }
+    }
+    &__next{
+        @include mixins.button-previous-next(140px, 323px);
+        &:hover{
+            cursor: pointer;
+        }
+        @media(min-width: 1115px){
+            display: none;
+        }
+    }
+    &__thumnails{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__thumnail{
+        display: none;
+        @media(min-width: 1115px){
+            display: block;
+            width: 90px;
+            border-radius: 15px;
+        &:hover{
+            cursor: pointer;
+            border: 2px solid color.$Orange;
+            opacity: 0.5;
+        }
+        }
+    }
+
+    @media(min-width: 1115px){
+        width: 445px;
+        &:hover{
+            cursor: pointer;
+        }
+        &__img-container{
+            height: 445px;
+            border-radius: 15px;
+            margin-bottom: 32px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+    }
+}

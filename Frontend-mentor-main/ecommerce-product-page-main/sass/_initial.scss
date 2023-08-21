@@ -1,0 +1,35 @@
+@use 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=PT+Sans&family=Poppins:wght@100&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container{
+    margin: auto;
+    width: 375px;
+    @media (min-width:1115px){
+        width: 1115px;    
+    }
+    position: relative;
+}
+
+.content{
+    @media(min-width: 1115px){
+        display: flex;
+        padding: 80px 30px;
+        gap: 125px;
+    }
+}
+
+.attribution{
+    opacity: 0.4;
+    font-style: italic;
+}

@@ -1,0 +1,77 @@
+@use 'variables' as color;
+@use 'mixins';
+
+.details{
+    /* border: 1px dashed black; */
+    padding: 25px 0;
+    &__company{
+        font-size: 0.8em;
+        text-transform: uppercase;
+        color: color.$Orange;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+    &__title{
+        margin-bottom: 25px;
+        font-size: 1.8em;
+    }
+    &__description{
+        line-height: 24px;
+        color: color.$Dark-grayish-blue;
+        font-size: 0.94em;
+        margin-bottom: 35px;
+    }
+    &__prices{
+        display: flex;
+        /* border: 1px dashed red; */
+        justify-content: space-between;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+    &__now{
+        font-weight: 700;
+        font-size: 1.8em;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+    &__discount{
+        font-size: 0.5em;
+        color: color.$Orange;
+        background-color: color.$Pale-orange;
+        border-radius: 5px;
+        padding: 3px 8px;
+    }
+    &__before{
+        color: color.$Grayish-blue;
+        text-decoration: line-through;
+        font-weight: bold;
+    }
+    &__Button{
+        @include mixins.button;
+    }
+    &__icon{
+        width: 20px;
+        height: 20px;
+    }
+    @media(min-width: 1115px){
+        /* border: 1px dashed black; */
+        width: 462px;
+        padding-top: 60px;
+        &__title{
+            font-size: 2.7em;
+        }
+        &__prices{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__now{
+            margin-bottom: 15px;
+        }
+        &__product-quantity{
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+    }
+}
